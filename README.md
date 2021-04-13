@@ -4,18 +4,23 @@ This repository shows examples of how to use the [cloud native buildpack framewo
 CN buildpacks represent the evolution of Heroku and Pivotal Cloud Foundry buildpacks into a public, cross platform build tool serving the modern major language ecosystems.
 With a [Dockerhub style registry](https://registry.buildpacks.io/) and [deep customization](https://buildpacks.io/docs/operator-guide/) of the build stack possible, Dockerizing applications has never been easier.
 
-Here we have a sample Java app, just a simple Spring Boot "hello world" API, built from the provided source of the [Spring Boot Demo Workshop](https://github.com/spring-guides/gs-spring-boot).
-Starting the app with `docker run -d -p 8080:8080 altorosdev/cn-buildpacks-example` and calling `GET http://localhost:8080/` will return `Greetings from Spring Boot!`.
-The magic isn't the app, it's building and publishing it as a Docker image with a single command.
+Try it out!
+This is a simple "hello world" Java API, built from the provided source of the [Spring Boot Demo Workshop](https://github.com/spring-guides/gs-spring-boot).
+Star the repo to trigger the CI pipeline, which publishes to Dockerhub.
+Start the app with `docker run -d -p 8080:8080 altorosdev/cn-buildpacks-example`, then `GET http://localhost:8080/` to see `Greetings from Spring Boot!`.
 
 ### Branches
 
 This repository has three branches, each showing a different approach to working with CN buildpacks:
+- `ops-owned` (default): the application and buildpack logic are cleanly separated. Application artifacts, such as jar files, are published to an internal registry, simulated here by an `artifacts` folder. The operations team owns the entirety of the buildpack process. This requires an additional component, but cleanly separates responsibilities and ensures images are standardized.
 - `dev-owned`: the application and buildpack logic live in the same repository, and the developers are responsible for choosing the pack and ensuring the build succeeds. This approach uses less infrastructure and may be faster to set up, but leaks operations resonsibilities into development teams.
-- `ops-owned`: the application and buildpack logic are cleanly separated. Application artifacts, such as jar files, are published to an internal registry, simulated here by an `artifacts` folder. The operations team owns the entirety of the buildpack process. This requires an additional component, but cleanly separates responsibilities and ensures images are standardized.
 - `ci-examples`: this branch has examples and templates for using buildpacks on CI platforms other than github.
 
-Both the dev and ops focused branches have a fully functional github CI pipeline, which publishes a Docker image containing the app to [Dockerhub](). Note that the `setup-pack` action is [officially supported](https://github.com/buildpacks/github-actions#setup-pack-cli-action).
+Both the dev and ops focused branches have a fully functional github CI pipeline, which publishes a Docker image containing the app to [Dockerhub](https://hub.docker.com/repository/docker/altorosdev/cn-buildpacks-example). 
+Check out the CI files [`.github/workflows/dev-owned.yml`](https://github.com/Altoros/cn-buildpacks-example/blob/dev-owned/.github/workflows/dev-owned.yml) and [`.github/workflows/dev-owned.yml`](https://github.com/Altoros/cn-buildpacks-example/blob/ops-owned/.github/workflows/ops-owned.yml) to see how it works.
+The ops-owned workflow is triggered by starring the repository.
+The dev-owned workflow is triggered by pushing commits.
+Note that the `setup-pack` action is [officially supported](https://github.com/buildpacks/github-actions#setup-pack-cli-action).
 
 ## Why
 
