@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - HelloControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>HelloControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.springboot.html">com.example.springboot</a> &gt; HelloControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.024s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getHello()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2021-04-09 16:22:53.017  INFO 16699 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springboot.HelloControllerTest], using SpringBootContextLoader
+2021-04-09 16:22:53.018  INFO 16699 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.springboot.HelloControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-04-09 16:22:53.018  INFO 16699 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.springboot.HelloControllerTest]: HelloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-04-09 16:22:53.024  INFO 16699 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.springboot.Application for test class com.example.springboot.HelloControllerTest
+2021-04-09 16:22:53.026  INFO 16699 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-04-09 16:22:53.027  INFO 16699 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2fac3338, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6afe0dce, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7e6818d1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@66cc9bb2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@283751a0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@32bda915, org.springframework.test.context.event.EventPublishingTestExecutionListener@c2d8103, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@e3e8a3f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1c967009, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@433c978f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@23f93372, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@59ec2a40, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76d50f4c]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.4)
+
+2021-04-09 16:22:53.051  INFO 16699 --- [    Test worker] c.e.springboot.HelloControllerTest       : Starting HelloControllerTest using Java 11.0.5 on Mikes-MacBook-Pro.local with PID 16699 (started by mikebeaverson in /Users/mikebeaverson/spring-boot-example)
+2021-04-09 16:22:53.052  INFO 16699 --- [    Test worker] c.e.springboot.HelloControllerTest       : No active profile set, falling back to default profiles: default
+2021-04-09 16:22:53.471  INFO 16699 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 16:22:53.672  INFO 16699 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-04-09 16:22:53.672  INFO 16699 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-04-09 16:22:53.677  INFO 16699 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 16:22:53.695  INFO 16699 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
+2021-04-09 16:22:53.716  INFO 16699 --- [    Test worker] c.e.springboot.HelloControllerTest       : Started HelloControllerTest in 0.682 seconds (JVM running for 9.872)
+Let's inspect the beans provided by Spring Boot:
+application
+applicationAvailability
+applicationTaskExecutor
+basicErrorController
+beanNameHandlerMapping
+beanNameViewResolver
+characterEncodingFilter
+classLoaderMetrics
+commandLineRunner
+controllerEndpointDiscoverer
+controllerEndpointHandlerMapping
+controllerExposeExcludePropertyEndpointFilter
+conventionErrorViewResolver
+defaultServletHandlerMapping
+defaultViewResolver
+diskSpaceHealthIndicator
+dispatcherServlet
+dispatcherServletMappingDescriptionProvider
+dispatcherServletRegistration
+endpointCachingOperationInvokerAdvisor
+endpointMediaTypes
+endpointOperationParameterMapper
+envInfoContributor
+error
+errorAttributes
+errorPageCustomizer
+errorPageRegistrarBeanPostProcessor
+fileDescriptorMetrics
+filterMappingDescriptionProvider
+flashMapManager
+formContentFilter
+handlerExceptionResolver
+handlerFunctionAdapter
+healthContributorRegistry
+healthEndpoint
+healthEndpointGroups
+healthEndpointGroupsBeanPostProcessor
+healthEndpointWebExtension
+healthHttpCodeStatusMapper
+healthStatusAggregator
+helloController
+httpRequestHandlerAdapter
+infoEndpoint
+jacksonObjectMapper
+jacksonObjectMapperBuilder
+jsonComponentModule
+jvmGcMetrics
+jvmMemoryMetrics
+jvmThreadMetrics
+lifecycleProcessor
+localeCharsetMappingsCustomizer
+localeResolver
+logbackMetrics
+management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
+management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
+management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
+management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties
+management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
+management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
+management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
+management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
+managementServletContext
+mappingJackson2HttpMessageConverter
+messageConverters
+meterRegistryPostProcessor
+metricsHttpClientUriTagFilter
+metricsHttpServerUriTagFilter
+metricsRestTemplateCustomizer
+metricsWebMvcConfigurer
+micrometerClock
+mockMvc
+mockMvcBuilder
+multipartConfigElement
+multipartResolver
+mvcContentNegotiationManager
+mvcConversionService
+mvcHandlerMappingIntrospector
+mvcPathMatcher
+mvcPatternParser
+mvcResourceUrlProvider
+mvcUriComponentsContributor
+mvcUrlPathHelper
+mvcValidator
+mvcViewResolver
+org.springframework.aop.config.internalAutoProxyCreator
+org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration$WebEndpointServletConfiguration
+org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration
+org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration
+org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.integration.IntegrationMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.web.client.HttpClientMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration
+org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration$SpringMvcConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$EnableSameManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration
+org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration
+org.springframework.boot.context.internalConfigurationPropertiesBinder
+org.springframework.boot.context.internalConfigurationPropertiesBinderFactory
+org.springframework.boot.context.properties.BoundConfigurationProperties
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration
+org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.event.internalEventListenerFactory
+org.springframework.context.event.internalEventListenerProcessor
+parameterNamesModule
+pathMappedEndpoints
+pingHealthContributor
+preserveErrorControllerTargetClassPostProcessor
+processorMetrics
+propertiesMeterFilter
+propertySourcesPlaceholderConfigurer
+requestContextFilter
+requestMappingHandlerAdapter
+requestMappingHandlerMapping
+resourceHandlerMapping
+restTemplateBuilder
+restTemplateBuilderConfigurer
+restTemplateExchangeTagsProvider
+routerFunctionMapping
+server-org.springframework.boot.autoconfigure.web.ServerProperties
+servletEndpointDiscoverer
+servletEndpointRegistrar
+servletExposeExcludePropertyEndpointFilter
+servletMappingDescriptionProvider
+servletWebChildContextFactory
+servletWebServerFactoryCustomizer
+simpleConfig
+simpleControllerHandlerAdapter
+simpleMeterRegistry
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties
+spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties
+spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties
+spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties
+spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+spring.web-org.springframework.boot.autoconfigure.web.WebProperties
+springBootMockMvcBuilderCustomizer
+standardJacksonObjectMapperBuilderCustomizer
+stringHttpMessageConverter
+taskExecutorBuilder
+taskSchedulerBuilder
+themeResolver
+tomcatMetricsBinder
+tomcatServletWebServerFactory
+tomcatServletWebServerFactoryCustomizer
+tomcatWebServerFactoryCustomizer
+uptimeMetrics
+viewControllerHandlerMapping
+viewNameTranslator
+viewResolver
+webEndpointDiscoverer
+webEndpointPathMapper
+webEndpointServletHandlerMapping
+webExposeExcludePropertyEndpointFilter
+webMvcMetricsFilter
+webMvcTagsProvider
+webServerFactoryCustomizerBeanPostProcessor
+websocketServletWebServerCustomizer
+welcomePageHandlerMapping
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.5.1</a> at Apr 9, 2021, 4:22:53 PM</p>
+</div>
+</div>
+</body>
+</html>
