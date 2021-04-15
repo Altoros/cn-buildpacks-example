@@ -1,0 +1,1 @@
+This directory simulates an artifact registry, such as Nexus or Artifactory, where application deliverables (jar files, build zips, etc.) are stored for security analysis and later release.
