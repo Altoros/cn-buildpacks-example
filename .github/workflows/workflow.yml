@@ -1,4 +1,4 @@
-name: "Ops-owned buildpack example: github CICD build and publish to dockerhub from artifact"
+name: "Cloud native buildpack example: build and publish an application image"
 
 on:
   watch:
