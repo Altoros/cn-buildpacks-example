@@ -38,13 +38,11 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: app-jar
-          path: ./app.jar
+          path: .
       - name: login
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-      - name: debug
-        run: ls -la .
       - name: build and publish app image
-        run: "pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --path ./app.jar --publish"
+        run: "pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --publish"
