@@ -45,4 +45,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: build and publish app image
-        run: "pack build altorosdev/cn-buildpacks-example --path . --builder paketobuildpacks/builder:base --publish"
+        run: "pack build altorosdev/cn-buildpacks-example --path ./*.jar --builder paketobuildpacks/builder:base --publish"
