@@ -7,7 +7,7 @@ on:
 jobs:
   dev-owned:
     runs-on: ubuntu-latest
-    name: build and publish image
+    name: dev CI
     steps:
       - uses: actions/checkout@v2
       - uses: buildpacks/github-actions/setup-pack@v4.1.0
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: 
       - dev-owned
-    name: build and publish image
+    name: ops CI
     steps:
       - uses: buildpacks/github-actions/setup-pack@v4.1.0
       - uses: actions/download-artifact@master
@@ -44,5 +44,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-      - name: package
-        run: "pack build altorosdev/cn-buildpacks-example --path ./app.jar --builder paketobuildpacks/builder:base --publish"
+      - name: build and publish app image
+        run: "pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --publish"
