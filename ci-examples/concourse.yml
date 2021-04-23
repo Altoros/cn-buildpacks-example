@@ -1,0 +1,52 @@
+resources:
+- name: cn-buildpacks-example
+  type: git
+  source:
+    uri: https://github.com/Altoros/cn-buildpacks-example.git
+
+jobs:
+- name: dev-owned
+  plan:
+  - aggregate:
+    - do:
+      - get: pcf-pipelines-utils
+      - task: build
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            repository: buildpacksio/pack:latest
+          inputs:
+          - name: cn-buildpacks-example
+          # simulates uploading the artifact to a registry
+          outputs:
+          - name: app-jar
+          run:
+            path: sh
+            args: 
+            - -exc
+            - | 
+              echo ((DOCKERHUB_PASSWORD)) | docker login --username ((DOCKERHUB_USER)) --password-stdin
+              ./gradlew build test
+              pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --publish
+              cp ./build/libs/*.jar app-jar/
+
+- name: ops-owned
+  plan:
+  - aggregate:
+    - do:
+      - task: publish
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            repository: buildpacksio/pack:latest
+          inputs:
+          - name: app-jar
+          run:
+            path: sh
+            args: 
+            - -exc
+            - | 
+              echo ((DOCKERHUB_PASSWORD)) | docker login --username ((DOCKERHUB_USER)) --password-stdin
+              pack build altorosdev/cn-buildpacks-example --path ./app-jar/*.jar --builder paketobuildpacks/builder:base --publish

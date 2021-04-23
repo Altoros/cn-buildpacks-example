@@ -1,0 +1,22 @@
+image: buildpacksio/pack:latest
+
+stages:
+  - dev-owned
+  - ops-owned
+
+dev-owned:
+  stage: dev-owned
+  script:
+    - ./gradlew build test
+    - echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USER" --password-stdin
+    - pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --publish
+# the cache represents uploading the binary to an artifact storage layer 
+  cache: 
+    paths: 
+      - ./build/libs
+
+ops-owned:
+  stage: ops-owned
+  script:
+    - echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USER" --password-stdin
+    - pack build altorosdev/cn-buildpacks-example --path ./build/libs/*.jar --builder paketobuildpacks/builder:base --publish
