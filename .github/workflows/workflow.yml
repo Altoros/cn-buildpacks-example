@@ -7,19 +7,12 @@ on:
 jobs:
   dev-owned:
     runs-on: ubuntu-latest
-    name: dev CI
+    name: dev-owned CI
     steps:
       - uses: actions/checkout@v2
       - uses: buildpacks/github-actions/setup-pack@v4.1.0
       - name: test
         run: ./gradlew build test
-      # for ops-owned consumption
-      - uses: actions/upload-artifact@master
-        name: simulate publishing artifact to registry
-        with:
-          name: app-jar
-          path: ./build/libs/*.jar
-      # the dev-owned workflow
       - name: login
         uses: docker/login-action@v1
         with:
@@ -28,11 +21,24 @@ jobs:
       - name: directly publish final image
         run: "pack build altorosdev/cn-buildpacks-example --builder paketobuildpacks/builder:base --publish"
 
-  ops-owned:
+  ops-owned-dev-CI:
+    runs-on: ubuntu-latest
+    name: ops-owned dev CI
+    steps:
+      - uses: actions/checkout@v2
+      - uses: buildpacks/github-actions/setup-pack@v4.1.0
+      - name: test
+        run: ./gradlew build test
+      - uses: actions/upload-artifact@master
+        name: simulate publishing artifact to registry
+        with:
+          name: app-jar
+          path: ./build/libs/*.jar
+  ops-owned-ops-CI:
     runs-on: ubuntu-latest
     needs: 
-      - dev-owned
-    name: ops CI
+      - ops-owned-dev-CI
+    name: ops-owned ops CI
     steps:
       - uses: buildpacks/github-actions/setup-pack@v4.1.0
       - uses: actions/download-artifact@master
