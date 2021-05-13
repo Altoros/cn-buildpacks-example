@@ -1,0 +1,13 @@
+# Buildpack API version
+api = "0.2"
+
+# Buildpack ID and metadata
+[buildpack]
+id = "altoros/gradle"
+version = "0.0.1"
+name = "Sample Gradle Buildpack"
+homepage = "https://github.com/Altoros/cn-buildpacks-example/tree/master/cnb-components/buildpacks/gradle"
+
+# Eligible stacks
+[[stacks]]
+id = "com.altoros.demo.cnb.stacks.ubuntu"

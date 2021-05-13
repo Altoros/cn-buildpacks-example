@@ -1,0 +1,19 @@
+# Included buildpacks
+
+[[buildpacks]]
+id = "altoros/gradle"
+version = "0.0.1"
+uri = "docker://altoros/buildpack:gradle"
+
+# Buildpack order detection
+
+[[order]]
+[[order.group]]
+id = "altoros/gradle"
+version = "0.0.1"
+
+# Stack definition
+[stack]
+id = "com.altoros.demo.cnb.stacks.ubuntu"
+build-image = "altoros/build-image:ubuntu"
+run-image = "altoros/run-image:ubuntu"
