@@ -2,19 +2,19 @@
 
 FROM ubuntu:bionic as base
 
-# Set required CNB information
-ENV CNB_USER_ID=1000
-ENV CNB_GROUP_ID=1000
+# Set required CNB stack ID
 ENV CNB_STACK_ID="com.altoros.demo.cnb.stacks.ubuntu"
 LABEL io.buildpacks.stack.id="com.altoros.demo.cnb.stacks.ubuntu"
 
-# Create user and group
+# Create CNB user and group
+ENV CNB_USER_ID=1000
+ENV CNB_GROUP_ID=1000
 RUN groupadd cnb --gid ${CNB_GROUP_ID} && \
   useradd --uid ${CNB_USER_ID} --gid ${CNB_GROUP_ID} -m -s /bin/bash cnb
 
 # Install packages that we want to make available at both build and run time
 RUN apt-get update && \
-  apt-get install -y xz-utils ca-certificates apt-transport-https gnupg && \
+  apt-get install -y xz-utils ca-certificates && \
   rm -rf /var/lib/apt/lists/*
 
 ## ---Build image---
