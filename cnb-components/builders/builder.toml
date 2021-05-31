@@ -1,3 +1,5 @@
+description = "Altoros example CNB builder"
+
 # Included buildpacks
 
 [[buildpacks]]
